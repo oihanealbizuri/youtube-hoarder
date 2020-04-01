@@ -1,0 +1,5 @@
+#!/bin/sh
+
+DOWNLOAD='~/youtube-hoarder/download'
+MUSIC_DL_DIR="/path/to/music"
+VIDEO_DL_DIR="/mnt/data1_8TB/Web content/YouTube"

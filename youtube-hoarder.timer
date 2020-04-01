@@ -1,0 +1,10 @@
+[Unit]
+Description=auto-youtube-dl update timer for %I
+
+[Timer]
+Persistent=true
+OnCalendar=*:0/15
+Unit=youtube-hoarder.service
+
+[Install]
+WantedBy=timers.target
