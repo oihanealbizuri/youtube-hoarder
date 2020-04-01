@@ -1,0 +1,8 @@
+[Unit]
+Description=youtube-dl automatic downloader for %I
+
+[Service]
+ExecStart=/home/owen/youtube-hoarder/youtube-hoarder
+
+[Install]
+WantedBy=default.target

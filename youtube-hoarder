@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Inspired by: https://www.reddit.com/r/linuxquestions/comments/9fa2c4/application_to_automatically_download_videos/
+
+source $CONFIG
+
+while read playlist; do
+    OUTPUT=$(echo $playlist | awk '{print $1}')
+    URL=$(echo $playlist | awk '{print $2}')
+
+    if test $OUTPUT = 'video'; then
+        youtube-dl $URL \
+            --add-metadata \
+            --all-subs \
+            --embed-subs \
+            --format 'bestvideo+bestaudio' \
+            --merge-output-format mkv \
+            --write-all-thumbnails \
+            --write-info-json \
+            --download-archive "$VIDEO_DL_DIR"/download-archive.txt \
+            --output "$VIDEO_DL_DIR"'/%(uploader)s/%(upload_date)s_%(title)s/%(title)s.%(ext)s'
+
+    elif test $OUTPUT = 'music'; then
+        youtube-dl $URL \
+            --add-metadata \
+            --extract-audio \
+            --audio-format mp3 \
+            --audio-quality 0 \
+            --download-archive "$MUSIC_DL_DIR"/download-archive.txt \
+            --output "$MUSIC_DL_DIR"'/%(title)s.%(ext)s'
+    fi
+done < $DOWNLOAD
