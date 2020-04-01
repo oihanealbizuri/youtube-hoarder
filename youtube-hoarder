@@ -2,7 +2,7 @@
 
 # Inspired by: https://www.reddit.com/r/linuxquestions/comments/9fa2c4/application_to_automatically_download_videos/
 
-source $CONFIG
+source $1
 
 while read playlist; do
     OUTPUT=$(echo $playlist | awk '{print $1}')

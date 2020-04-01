@@ -1,5 +1,5 @@
 [Unit]
-Description=auto-youtube-dl update timer for %I
+Description=youtube-hoarder update timer
 
 [Timer]
 Persistent=true
