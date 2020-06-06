@@ -12,7 +12,7 @@ Install service and timer files as an user (via symlinks):
 ## Configuration
 Edit `config` file variables:
 
-- `DOWNLOAD`: points to `youtube-hoarder/download`, where playlist and channels to be downloaded are saved.
+- `DOWNLOAD`: points to `youtube-hoarder/download`, where playlist and channels to be downloaded are set.
 - `MUSIC_DL_DIR` and `VIDEO_DL_DIR`: they point to download directories.
 
 Edit `download` file, the script reads the first two columns:
