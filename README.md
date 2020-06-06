@@ -4,6 +4,13 @@ Download YouTube playlist, channels and videos automatically.
 ## Instalation
 (WARNING: service files are made for systemd)
 
+Install `youtube-dl`:
+
+- Using `pip` (for a user): `pip --user install youtube-dl`
+- Using `pip` (globally, with sudo): `sudo pip install youtube-dl`
+- Arch Linux: `pacman -S youtube-dl`
+- Ubuntu: `apt-get install youtube-dl`
+
 Install service and timer files as an user (via symlinks):
 
     mkdir -p .config/systemd/user/
