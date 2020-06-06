@@ -18,7 +18,7 @@ Clone repository:
 Install service and timer files as an user (via symlinks):
 
     mkdir -p .config/systemd/user/
-    ln -sf /path/to/youtube-hoarder.* .config/systemd/user/
+    ln -sf /full/path/to/youtube-hoarder.* /home/user/.config/systemd/user/
 
 ## Configuration
 Edit `youtube-hoarder.service` file `ExecStart` command to match the cloned repo path:
