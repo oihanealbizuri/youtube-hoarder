@@ -11,12 +11,20 @@ Install `youtube-dl`:
 - Arch Linux: `pacman -S youtube-dl`
 - Ubuntu: `apt-get install youtube-dl`
 
+Clone repository:
+
+   git clone https://github.com/owentrigueros/youtube-hoarder.git
+
 Install service and timer files as an user (via symlinks):
 
     mkdir -p .config/systemd/user/
     ln -sf /path/to/youtube-hoarder.* .config/systemd/user/
 
 ## Configuration
+Edit `youtube-hoarder.service` file `ExecStart` command to match the cloned repo path:
+
+   `ExecStart=/path/to/youtube-hoarder/youtube-hoarder /path/to/youtube-hoarder/config`
+
 Edit `config` file variables:
 
 - `DOWNLOAD`: points to `youtube-hoarder/download`, where playlist and channels to be downloaded are set.
