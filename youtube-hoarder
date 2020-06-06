@@ -17,6 +17,7 @@ while read playlist; do
             --merge-output-format mkv \
             --write-all-thumbnails \
             --write-info-json \
+            --ignore-errors \
             --download-archive "$VIDEO_DL_DIR"/download-archive.txt \
             --output "$VIDEO_DL_DIR"'/%(uploader)s/%(upload_date)s_%(title)s/%(title)s.%(ext)s'
 
@@ -26,6 +27,7 @@ while read playlist; do
             --extract-audio \
             --audio-format mp3 \
             --audio-quality 0 \
+            --ignore-errors \
             --download-archive "$MUSIC_DL_DIR"/download-archive.txt \
             --output "$MUSIC_DL_DIR"'/%(title)s.%(ext)s'
     fi
