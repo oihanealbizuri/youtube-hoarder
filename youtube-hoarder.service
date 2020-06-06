@@ -2,7 +2,7 @@
 Description=youtube-dl automatic downloader
 
 [Service]
-ExecStart=/home/owen/youtube-hoarder/youtube-hoarder /home/owen/youtube-hoarder/config
+ExecStart=/path/to/youtube-hoarder/youtube-hoarder /path/to/youtube-hoarder/config
 
 [Install]
 WantedBy=default.target
