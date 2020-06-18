@@ -13,7 +13,7 @@ Install `youtube-dl`:
 
 Clone repository:
 
-   git clone https://github.com/owentrigueros/youtube-hoarder.git
+    git clone https://github.com/owentrigueros/youtube-hoarder.git
 
 Install service and timer files as an user (via symlinks):
 
@@ -45,3 +45,8 @@ For example:
 Enable and start `youtube-hoarder.timer` (by default, it runs `youtube-hoarder.service` once every 15 minutes):
 
     systemctl enable --now --user youtube-hoarder.timer
+
+### Autostart
+To enable at system startup:
+
+    # loginctl enable-linger <username>
